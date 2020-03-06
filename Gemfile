@@ -59,3 +59,6 @@ gem 'erb2haml'
 
 # FontAwesomeの導入
 gem 'font-awesome-sass'
+
+# deviceの導入
+gem 'devise'

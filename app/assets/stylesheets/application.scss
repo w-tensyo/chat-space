@@ -1,10 +1,13 @@
 /*cssリセット*/
 @import "reset";
 
+/*フラッシュメッセージ用のスタイル設定*/
+@import "config/colors.scss";
+
 /*-----画面レイアウトに関わるファイル-----*/
 
 /*画面の大枠を定義するファイル*/
-@import "modules/_main";
+@import "modules/main";
 /*side-barエリアを定義するファイル*/
 @import "modules/side-bar/side-header";
 @import "modules/side-bar/group-list";
@@ -18,3 +21,7 @@
 /*font-awesomeのimport*/
 @import "font-awesome-sprockets";
 @import "font-awesome";
+
+/*------users用のscss------*/
+@import "modules/user";
+@import "modules/flash";
