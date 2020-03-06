@@ -6,7 +6,7 @@
 |------|----|-------|
 |emails|string|null: false|
 |password|string|null: false|
-|username|string|null: false|
+|name|string|null: false|
 |group_id|integer|null: false, foreign_key: true|
 ### Association
 - has_many :messages
@@ -35,7 +35,7 @@
 - belong_to :user
 - belong_to :group
 
-## users_groupsグループ（中間テーブル）
+## groups_userグループ（中間テーブル）
 |Column|Type|Options|
 |------|----|-------|
 |users_id|integer|null: false, foreign_key: true|

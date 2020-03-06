@@ -62,3 +62,6 @@ gem 'font-awesome-sass'
 
 # deviceの導入
 gem 'devise'
+
+# デバッグツール？pry-railsの導入
+gem 'pry-rails'
