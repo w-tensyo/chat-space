@@ -1,0 +1,20 @@
+/*cssリセット*/
+@import "reset";
+
+/*-----画面レイアウトに関わるファイル-----*/
+
+/*画面の大枠を定義するファイル*/
+@import "modules/_main";
+/*side-barエリアを定義するファイル*/
+@import "modules/side-bar/side-header";
+@import "modules/side-bar/group-list";
+/*chat-mainエリアを定義するファイル*/
+@import "modules/chat-main/group-info";
+@import "modules/chat-main/message-list";
+@import "modules/chat-main/message-form";
+
+/*-----画面レイアウトに関わるファイル（ここまで）-----*/
+
+/*font-awesomeのimport*/
+@import "font-awesome-sprockets";
+@import "font-awesome";

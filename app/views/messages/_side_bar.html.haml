@@ -1,0 +1,30 @@
+.side-bar
+  .user-name
+    .top-items
+      %p.top-items__name
+        watanabe
+      %ul.top-items__icons
+        %li.top-items__icons__new-group
+          = link_to "#" do
+            = icon('far', 'edit')
+            %span<>
+        %li
+          = link_to "#" do
+            = icon('fas', 'cog',)
+            %span<>
+  .group-list
+    .group
+      %p.group__name
+        techcamp
+      %p.group__new-message
+        まだメッセージがありません。
+    .group
+      %p.group__name
+        仮置きグループ1
+      %p.group__new-message
+        メッセージ表示エリア
+    .group
+      %p.group__name
+        仮置きグループ2
+      %p.group__new-message
+        メッセージ表示エリア2
