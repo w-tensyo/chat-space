@@ -3,32 +3,30 @@
     .show-info
       .show-info__detail
         .show-info__detail__name
-          test
+          = @group.name
           %ul.show-info__detail__menber-list
             Member：
-            %li
-              Aさん
-            %li
-              Bさん
-            %li
-              Cさん
+            - @group.users.each do |user|
+              %li
+                = user.name
       .show-info__group-edit
-        = link_to 'Edit', '#'
+        = link_to 'Edit', edit_group_path(@group)
   .message-list
-    .msg
-      .msg-info
-        %p.msg-info__name
-          watanabe
-        %p.msg-info__text
-          Haml苦手・・・
-      %p.msg-date
-        2020/03/04(Wed) 20:50:35
+    /インスタンス変数名の単数形と部分テンプレートの名前が同じならできる
+    = render @messages
+    /下の書き方は処理速度が遅いので、できる限り利用しない
+    /= render partial: 'message', collection: @messages
+
   .message-form
     .form
-      %form.new_message
-        .input-box
-          %input{type: "text", class: "input-box__text", placeholder: "type a message"}
-          %label{class: "input-box__img"}
-            = icon('fa', 'image')
-            %input{type: "file", class: "input-box__file"}
-        %input{type: "submit", class: "submit-btn", value: "Send"}
+      = form_for [@group, @message] do |f|
+        %form.new_message
+          .input-box
+            /%input{type: "text", class: "input-box__text", placeholder: "type a message"}
+            = f.text_field :content, class: 'input-box__text', placeholder: 'type a message'
+            /%label{class: "input-box__img"}
+            = f.label :image, class: 'input-box__img' do
+              = icon('fa', 'image')
+              %input{type: "file", class: "input-box__file"}
+          /%input{type: "submit", class: "submit-btn", value: "Send"}
+          = f.submit 'Send', class: 'submit-btn'
