@@ -65,3 +65,7 @@ gem 'devise'
 
 # デバッグツール？pry-railsの導入
 gem 'pry-rails'
+
+# Image Uploader
+gem 'carrierwave'
+gem 'mini_magick'
