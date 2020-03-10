@@ -27,6 +27,6 @@
             /%label{class: "input-box__img"}
             = f.label :image, class: 'input-box__img' do
               = icon('fa', 'image')
-              %input{type: "file", class: "input-box__file"}
+              = f.file_field :image, class: 'input-box__file'
           /%input{type: "submit", class: "submit-btn", value: "Send"}
           = f.submit 'Send', class: 'submit-btn'
