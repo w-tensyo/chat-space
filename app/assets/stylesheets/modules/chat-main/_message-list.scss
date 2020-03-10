@@ -3,26 +3,24 @@
   background-color: #fafafa;
   padding: 35px 40px 0 40px;
   .msg{
-    height:88px;
     width: 100%;
-    display: flex;
     .msg-info{
-      margin-bottom: 12px;
-      margin-right:10px;
+      display: flex;
       &__name{
         color: #333333;
         font-size:16px;
         margin-bottom: 12px;
       }
+      &__date{
+        color: #999999;
+        font-size:12px;
+        padding-left:10px;
+      }
       &__text{
         color:#434A54;
         font-size:14px;
-        margin-bottom: 46px;
+        padding-bottom: 46px;
       }
-    }
-    .msg-date{
-      color: #999999;
-      font-size:12px;
     }
   }
 }
