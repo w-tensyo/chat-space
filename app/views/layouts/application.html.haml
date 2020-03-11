@@ -3,8 +3,15 @@
   %head
     %meta{content: "text/html; charset: UTF-8", "http-equiv": "Content-Type"}/
     %title ChatSpace
-    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
-    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    -# ajaxを実装するために、toubo gemを削除。こちらの初期の記載も修正
+    -# = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    -# = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+
+    -# 修正後の記載
+    = stylesheet_link_tag    'application', media: 'all'
+    = javascript_include_tag 'application'
+    -# ここまで
+
     = csrf_meta_tags
   %body
     = render 'layouts/notifications'

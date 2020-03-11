@@ -4,8 +4,8 @@
       = message.user.name
     %p.msg-info__date
       = message.created_at.strftime("%Y年%m月%d日 %H時%M分")
-  %p
+  .msg-info__text-image
+    .msg-info__text-image__coment
     - if message.content.present?
-      %p.msg-info__text
-        = message.content
-    = image_tag message.image.url, class: "msg-image" if message.image.present?
+      = message.content
+  = image_tag message.image.url, class: "msg-info__image" if message.image.present?
