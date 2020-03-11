@@ -2,9 +2,11 @@
   height: calc(100vh - 100px - 90px);
   background-color: #fafafa;
   padding: 35px 40px 0 40px;
-  overflow: auto;
+  overflow-y: auto;
+
   .msg{
     width: 100%;
+    margin-bottom: 46px;
     .msg-info{
       display: flex;
       &__name{
@@ -17,10 +19,9 @@
         font-size:12px;
         padding-left:10px;
       }
-      &__text{
+      &__text-image{
         color:#434A54;
         font-size:14px;
-        padding-bottom: 46px;
       }
     }
   }

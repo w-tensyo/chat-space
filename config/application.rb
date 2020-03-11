@@ -6,6 +6,9 @@ Bundler.require(*Rails.groups)
 
 module ChatSpace
   class Application < Rails::Application
+    # タイムゾーンを日本時間に設定する記述
+    config.time_zone = 'Tokyo'
+    
     config.generators do |g|
       g.stylesheets false
       g.javascripts false
