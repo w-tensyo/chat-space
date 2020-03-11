@@ -2,6 +2,7 @@
   height: calc(100vh - 100px - 90px);
   background-color: #fafafa;
   padding: 35px 40px 0 40px;
+  overflow: auto;
   .msg{
     width: 100%;
     .msg-info{
