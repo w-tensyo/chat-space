@@ -19,6 +19,9 @@
         font-size: 12px;
         display:flex;
         list-style: none;
+        li{
+          margin-right:10px;
+        }
       }
     }
     &__group-edit{
