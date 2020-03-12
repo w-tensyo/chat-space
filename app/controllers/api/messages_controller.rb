@@ -1,12 +1,10 @@
 class Api::MessagesController < ApplicationController
   def index
-    #ルーティングでの設定でひっぱってくるparams[:group_id]でグループidを判別
-    #group_idに紐づいたグループのDBを取得
+    # ルーティングでの設定によりparamsの中にgroup_idというキーでグループのidが入るので、これを元にDBからグループを取得する
     group = Group.find(params[:group_id])
-    #ajaxで送られてくる最後のメッセージのid番号を変数に入れる
+    # ajaxで送られてくる最後のメッセージのid番号を変数に代入
     last_message_id = params[:id].to_i
-    # 取得したグループのDBからwhereメソッドを使って対象のidがあるかどうかを判定
-    # ここについては、idがlast_message_idよりも大きいものがあれば、それを@messagesに入れる処理をしている
+    # 取得したグループでのメッセージ達から、idがlast_message_idよりも新しい(大きい)メッセージ達のみを取得
     @messages = group.messages.includes(:user).where("id > ?", last_message_id)
   end
 end
