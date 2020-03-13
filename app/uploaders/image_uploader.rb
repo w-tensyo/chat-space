@@ -4,7 +4,10 @@ class ImageUploader < CarrierWave::Uploader::Base
   include CarrierWave::MiniMagick
 
   # Choose what kind of storage to use for this uploader:
-  storage :file
+  
+  # fog-awsのgemをインストールしたので、:fileから:fogに変更
+  storage :fog
+  
   # storage :fog
   process resize_to_limit: [500, 500]
   # Override the directory where uploaded files will be stored.

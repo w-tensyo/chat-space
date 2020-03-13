@@ -18,3 +18,5 @@
 
 #アップロードされる画像についてはコミット対象とする必要がないため、uploads配下は.gitignoreに設定
 public/uploads/*
+
+config/secrets.yml
