@@ -101,9 +101,9 @@ $(function(){
             insertHTML += buildHTML(message)
           });
           //メッセージが入ったHTMLに、入れ物ごと追加
-          //対象divのクラス名がmsgなので、
-          $('.msg').append(insertHTML);
-          $('.msg').animate({ scrollTop: $('.msg')[0].scrollHeight});
+          //対象divの大元"message-listに実装を修正
+          $('.message-list').append(insertHTML);
+          $('.message-list').animate({ scrollTop: $('.message-list')[0].scrollHeight});
         }
       })
       .fail(function(){
